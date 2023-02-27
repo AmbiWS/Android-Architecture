@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'org.jmailen.kotlinter'
+    id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {
@@ -54,6 +55,9 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
     // DI
-    def koin_version = "3.3.3"
     implementation "io.insert-koin:koin-android:$koin_version"
+
+    // Navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigation_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$navigation_version"
 }

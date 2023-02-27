@@ -1,11 +1,13 @@
 package com.ambiws.androidarchitecture
 
 import androidx.lifecycle.ViewModel
-import com.ambiws.androidarchitecture.utils.logd
+import com.ambiws.androidarchitecture.utils.SingleLiveEvent
 
 class MainViewModel : ViewModel() {
 
-    init {
-        logd("MainViewModel is successfully initialized.")
+    val startDestinationEvent = SingleLiveEvent<Int>()
+
+    fun initStartDestination() {
+        startDestinationEvent.value = R.id.homeFragment
     }
 }

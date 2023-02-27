@@ -1,0 +1,57 @@
+package com.ambiws.androidarchitecture.base
+
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.viewbinding.ViewBinding
+import com.ambiws.androidarchitecture.R
+import com.ambiws.androidarchitecture.utils.logd
+
+typealias Inflate<T> = (LayoutInflater, ViewGroup?, Boolean) -> T
+
+abstract class BaseFragment<VB : ViewBinding>(
+    private val inflate: Inflate<VB>
+) : Fragment() {
+
+    private var _binding: VB? = null
+
+    protected val name: String = this::class.java.simpleName
+
+    val binding: VB
+        get() = _binding as VB
+
+    open fun setupUi() {
+        logd(getString(R.string.setup_stage, "Ui", name))
+    }
+
+    open fun setupListeners() {
+        logd(getString(R.string.setup_stage, "Listeners", name))
+    }
+
+    open fun setupObservers() {
+        logd(getString(R.string.setup_stage, "Observers", name))
+    }
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        _binding = inflate.invoke(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setupUi()
+        setupListeners()
+        setupObservers()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+}
