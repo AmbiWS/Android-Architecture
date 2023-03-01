@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Android Architecture</string>
     <string name="setup_stage">%s setup stage in %s</string>
-    <string name="exception_null_nav_host_fragment">Application container fragment can\'t be null in current stage</string>
+    <string name="exception_null_app_container_fragment">Application container fragment can\'t be null in current stage</string>
     <string name="home_fragment">Home Fragment</string>
+    <string name="list">List</string>
 </resources>

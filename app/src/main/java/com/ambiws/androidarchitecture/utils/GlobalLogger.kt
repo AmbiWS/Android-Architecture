@@ -2,6 +2,7 @@ package com.ambiws.androidarchitecture.utils
 
 import android.util.Log
 import com.ambiws.androidarchitecture.BuildConfig
+import com.ambiws.androidarchitecture.utils.extensions.className
 
 private val loggingEnabled = BuildConfig.DEBUG
 
@@ -48,7 +49,7 @@ fun Any.logwtf(msg: String?) {
 }
 
 val <T : Any> T.TAG: String
-    get() = fixTagLength("${Const.APP_NAME_SHORT}_${this::class.java.simpleName}")
+    get() = fixTagLength("${Const.APP_NAME_SHORT}_$className")
 
 private fun fixTagLength(tag: String): String {
     return if (tag.length <= Const.MAX_LOGGING_TAG_LENGTH) {

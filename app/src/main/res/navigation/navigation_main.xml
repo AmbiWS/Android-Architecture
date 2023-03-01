@@ -6,6 +6,15 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.ambiws.androidarchitecture.features.home.HomeFragment"
-        android:label="HomeFragment" />
+        android:name="com.ambiws.androidarchitecture.features.home.ui.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.ambiws.androidarchitecture.features.list.ListFragment"
+        android:label="ListFragment" />
 </navigation>

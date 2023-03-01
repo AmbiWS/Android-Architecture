@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tvTitle"
+    <com.ambiws.androidarchitecture.core.view.CustomToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:leftActionVisible="false"
+        app:title="Home" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnList"
+        style="@style/ClassicButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/home_fragment" />
-</FrameLayout>
+        android:layout_marginTop="16dp"
+        android:text="@string/list" />
+</LinearLayout>

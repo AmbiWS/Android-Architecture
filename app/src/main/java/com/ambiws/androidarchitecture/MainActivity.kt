@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         getApplicationContainerFragment()?.let { navigationHostFragment ->
             initDashboardNavigation(navigationHostFragment)
             activateSplashScreen()
-        } ?: throw IllegalStateException(getString(R.string.exception_null_nav_host_fragment))
+        } ?: throw IllegalStateException(getString(R.string.exception_null_app_container_fragment))
     }
 
     private fun initNavigationGraph() {

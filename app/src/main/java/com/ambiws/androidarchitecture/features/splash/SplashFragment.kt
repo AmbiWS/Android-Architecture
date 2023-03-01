@@ -3,9 +3,10 @@ package com.ambiws.androidarchitecture.features.splash
 import android.view.View
 import android.view.animation.AccelerateInterpolator
 import com.ambiws.androidarchitecture.base.BaseFragment
+import com.ambiws.androidarchitecture.base.EmptyViewModel
 import com.ambiws.androidarchitecture.databinding.FragmentSplashBinding
 
-class SplashFragment : BaseFragment<FragmentSplashBinding>(
+class SplashFragment : BaseFragment<EmptyViewModel, FragmentSplashBinding>(
     FragmentSplashBinding::inflate
 ) {
 

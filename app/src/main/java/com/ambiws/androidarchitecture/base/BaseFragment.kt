@@ -4,34 +4,52 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.CallSuper
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.viewbinding.ViewBinding
 import com.ambiws.androidarchitecture.R
+import com.ambiws.androidarchitecture.base.navigation.NavigationCommandHandler
+import com.ambiws.androidarchitecture.utils.extensions.className
+import com.ambiws.androidarchitecture.utils.extensions.subscribe
 import com.ambiws.androidarchitecture.utils.logd
+import org.koin.androidx.viewmodel.ext.android.viewModelForClass
+import java.lang.reflect.ParameterizedType
 
 typealias Inflate<T> = (LayoutInflater, ViewGroup?, Boolean) -> T
 
-abstract class BaseFragment<VB : ViewBinding>(
+abstract class BaseFragment<VM : BaseViewModel, VB : ViewBinding>(
     private val inflate: Inflate<VB>
 ) : Fragment() {
 
     private var _binding: VB? = null
-
-    protected val name: String = this::class.java.simpleName
-
     val binding: VB
         get() = _binding as VB
 
+    @Suppress("UNCHECKED_CAST")
+    protected open val viewModel: VM by lazy {
+        viewModelForClass(
+            clazz = ((javaClass.genericSuperclass as ParameterizedType).actualTypeArguments[0] as Class<VM>).kotlin,
+        ).value
+    }
+
+    protected open val navigationCommandHandler =
+        NavigationCommandHandler(navControllerDefinition = { findNavController() })
+
     open fun setupUi() {
-        logd(getString(R.string.setup_stage, "Ui", name))
+        logd(getString(R.string.setup_stage, "Ui", className))
     }
 
     open fun setupListeners() {
-        logd(getString(R.string.setup_stage, "Listeners", name))
+        logd(getString(R.string.setup_stage, "Listeners", className))
     }
 
+    @CallSuper
     open fun setupObservers() {
-        logd(getString(R.string.setup_stage, "Observers", name))
+        logd(getString(R.string.setup_stage, "Observers", className))
+        subscribe(viewModel.navigationCommand) { navigationCommand ->
+            navigationCommandHandler.handle(requireActivity(), navigationCommand)
+        }
     }
 
     override fun onCreateView(
