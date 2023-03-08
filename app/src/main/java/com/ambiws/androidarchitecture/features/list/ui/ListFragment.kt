@@ -1,10 +1,9 @@
-package com.ambiws.androidarchitecture.features.list
+package com.ambiws.androidarchitecture.features.list.ui
 
 import com.ambiws.androidarchitecture.base.BaseFragment
-import com.ambiws.androidarchitecture.base.EmptyViewModel
 import com.ambiws.androidarchitecture.databinding.FragmentListBinding
 
-class ListFragment : BaseFragment<EmptyViewModel, FragmentListBinding>(
+class ListFragment : BaseFragment<ListViewModel, FragmentListBinding>(
     FragmentListBinding::inflate
 ) {
 
