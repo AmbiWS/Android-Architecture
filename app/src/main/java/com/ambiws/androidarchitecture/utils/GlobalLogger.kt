@@ -48,7 +48,7 @@ fun Any.logwtf(msg: String?) {
     }
 }
 
-val <T : Any> T.TAG: String
+private val <T : Any> T.TAG: String
     get() = fixTagLength("${Const.APP_NAME_SHORT}_$className")
 
 private fun fixTagLength(tag: String): String {

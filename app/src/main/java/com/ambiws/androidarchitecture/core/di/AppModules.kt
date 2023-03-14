@@ -8,6 +8,7 @@ import com.ambiws.androidarchitecture.features.user.di.userModule
 object AppModules {
     val applicationModules = listOf(
         coreModule,
+        utilsModule,
         networkModule,
         mockNetworkModule,
         homeModule,

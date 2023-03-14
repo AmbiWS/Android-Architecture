@@ -1,8 +1,27 @@
 package com.ambiws.androidarchitecture.core.network.mock
 
+import com.ambiws.androidarchitecture.core.network.adapters.model.StatusCode
 import com.ambiws.androidarchitecture.features.user.data.response.UserResponse
 
 object MockData {
+    val errorBadRequest = MockErrorResponse(
+        status = StatusCode.BAD_REQUEST.code,
+        message = "Bad request",
+        errors = null,
+    )
+
+    val errorUnauthorized = MockErrorResponse(
+        status = StatusCode.UNAUTHORIZED.code,
+        message = "Unauthorized",
+        errors = null,
+    )
+
+    val errorServerUnexpected = MockErrorResponse(
+        status = StatusCode.INTERNAL_SERVER_ERROR.code,
+        message = null,
+        errors = null,
+    )
+
     val users = listOf(
         UserResponse(
             id = 2089L,

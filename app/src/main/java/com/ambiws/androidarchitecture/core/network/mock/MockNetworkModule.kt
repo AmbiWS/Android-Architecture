@@ -1,7 +1,7 @@
 package com.ambiws.androidarchitecture.core.network.mock
 
 import com.ambiws.androidarchitecture.core.network.api.*
-import com.ambiws.androidarchitecture.core.network.utils.StatusCode
+import com.ambiws.androidarchitecture.core.network.adapters.model.StatusCode
 import com.google.gson.Gson
 import org.koin.dsl.module
 

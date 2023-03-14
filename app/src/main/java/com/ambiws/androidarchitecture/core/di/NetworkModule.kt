@@ -1,6 +1,8 @@
 package com.ambiws.androidarchitecture.core.di
 
 import com.ambiws.androidarchitecture.BuildConfig
+import com.ambiws.androidarchitecture.core.network.adapters.ErrorCallAdapterFactory
+import com.ambiws.androidarchitecture.core.network.adapters.ExceptionParser
 import com.ambiws.androidarchitecture.core.network.api.UserApi
 import com.ambiws.androidarchitecture.core.network.mock.MockInterceptor
 import com.google.gson.GsonBuilder
@@ -16,11 +18,7 @@ val networkModule = module {
 
     single {
         HttpLoggingInterceptor().apply {
-            level = if (isDebugBuild) {
-                HttpLoggingInterceptor.Level.BODY
-            } else {
-                HttpLoggingInterceptor.Level.NONE
-            }
+            level = HttpLoggingInterceptor.Level.BODY
         }
     }
 
@@ -33,15 +31,21 @@ val networkModule = module {
     }
 
     single {
+        ErrorCallAdapterFactory()
+    }
+
+    single {
+        ExceptionParser(get())
+    }
+
+    single {
         if (isDebugBuild) {
             OkHttpClient.Builder()
                 .addInterceptor(get<HttpLoggingInterceptor>())
                 .addInterceptor(get<MockInterceptor>())
                 .build()
         } else {
-            OkHttpClient.Builder()
-                .addInterceptor(get<HttpLoggingInterceptor>())
-                .build()
+            OkHttpClient.Builder().build()
         }
     }
 
@@ -49,6 +53,7 @@ val networkModule = module {
         Retrofit.Builder()
             .baseUrl(BuildConfig.BASE_URL)
             .addConverterFactory(get<GsonConverterFactory>())
+            .addCallAdapterFactory(get<ErrorCallAdapterFactory>())
             .client(get())
             .build()
     }

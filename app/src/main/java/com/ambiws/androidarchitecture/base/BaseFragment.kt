@@ -13,6 +13,7 @@ import com.ambiws.androidarchitecture.base.navigation.NavigationCommandHandler
 import com.ambiws.androidarchitecture.utils.extensions.className
 import com.ambiws.androidarchitecture.utils.extensions.subscribe
 import com.ambiws.androidarchitecture.utils.logd
+import com.google.android.material.snackbar.Snackbar
 import org.koin.androidx.viewmodel.ext.android.viewModelForClass
 import java.lang.reflect.ParameterizedType
 
@@ -49,6 +50,21 @@ abstract class BaseFragment<VM : BaseViewModel, VB : ViewBinding>(
         logd(getString(R.string.setup_stage, "Observers", className))
         subscribe(viewModel.navigationCommand) { navigationCommand ->
             navigationCommandHandler.handle(requireActivity(), navigationCommand)
+        }
+        subscribe(viewModel.stateLiveEvent) { state ->
+            when (state) {
+                UiState.Loading -> {
+                    // Nothing to do
+                }
+                UiState.Success -> {
+                    // Nothing to do
+                }
+                is UiState.Error -> {
+                    Snackbar.make(binding.root, state.error.message, Snackbar.LENGTH_SHORT)
+                        .setTextColor(requireContext().getColor(R.color.lt_red))
+                        .show()
+                }
+            }
         }
     }
 
