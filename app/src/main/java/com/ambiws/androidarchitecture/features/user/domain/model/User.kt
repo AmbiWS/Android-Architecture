@@ -7,5 +7,5 @@ data class User(
     val gender: String?,
     val company: String?,
     val skills: List<String>?,
-    val address: String?,
+    val address: String?
 )

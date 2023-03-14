@@ -9,9 +9,9 @@ import java.io.IOException
 import kotlin.random.Random
 
 /**
-    Class for mock network requests
+ Class for mock network requests
 
-    All thrown exceptions must be subclass of IOException, so coroutines can handle them properly
+ All thrown exceptions must be subclass of IOException, so coroutines can handle them properly
  */
 class MockInterceptor : Interceptor {
 

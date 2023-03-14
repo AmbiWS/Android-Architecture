@@ -4,9 +4,9 @@ import com.ambiws.androidarchitecture.core.network.adapters.model.StatusCode
 
 class UnauthorizedServerError(
     override val message: String,
-    cause: Throwable,
+    cause: Throwable
 ) : ServerError(
     message = message,
     code = StatusCode.UNAUTHORIZED.code,
-    cause = cause,
+    cause = cause
 )

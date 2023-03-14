@@ -7,19 +7,19 @@ object MockData {
     val errorBadRequest = MockErrorResponse(
         status = StatusCode.BAD_REQUEST.code,
         message = "Bad request",
-        errors = null,
+        errors = null
     )
 
     val errorUnauthorized = MockErrorResponse(
         status = StatusCode.UNAUTHORIZED.code,
         message = "Unauthorized",
-        errors = null,
+        errors = null
     )
 
     val errorServerUnexpected = MockErrorResponse(
         status = StatusCode.INTERNAL_SERVER_ERROR.code,
         message = null,
-        errors = null,
+        errors = null
     )
 
     val users = listOf(
@@ -32,9 +32,9 @@ object MockData {
             skills = listOf(
                 "Kotlin",
                 "Architecture",
-                "CI/CD",
+                "CI/CD"
             ),
-            address = null,
+            address = null
         ),
         UserResponse(
             id = 2177L,
@@ -44,9 +44,9 @@ object MockData {
             company = "Google",
             skills = listOf(
                 "Data structures",
-                "Algorithms",
+                "Algorithms"
             ),
-            address = "4455 Landing Lange, APT 4, Louisville, KY 40018-1234",
+            address = "4455 Landing Lange, APT 4, Louisville, KY 40018-1234"
         ),
         UserResponse(
             id = 3001L,
@@ -55,8 +55,8 @@ object MockData {
             gender = null,
             company = null,
             skills = null,
-            address = null,
-        ),
+            address = null
+        )
     )
 
     val usersId = users.map {

@@ -12,9 +12,9 @@ class ErrorCallAdapterFactory : CallAdapter.Factory() {
         annotations: Array<out Annotation>,
         retrofit: Retrofit
     ): CallAdapter<*, *>? {
-        if (getRawType(returnType) != Call::class.java
-            || returnType !is ParameterizedType
-            || returnType.actualTypeArguments.size != 1
+        if (getRawType(returnType) != Call::class.java ||
+            returnType !is ParameterizedType ||
+            returnType.actualTypeArguments.size != 1
         ) {
             return null
         }
@@ -26,7 +26,7 @@ class ErrorCallAdapterFactory : CallAdapter.Factory() {
         )
         @Suppress("UNCHECKED_CAST")
         return ErrorCallAdapter(
-            delegateAdapter = callAdapter as CallAdapter<Any, Call<*>>,
+            delegateAdapter = callAdapter as CallAdapter<Any, Call<*>>
         )
     }
 }

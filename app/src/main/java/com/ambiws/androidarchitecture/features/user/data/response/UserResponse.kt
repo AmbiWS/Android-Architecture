@@ -17,7 +17,7 @@ data class UserResponse(
     @SerializedName("skills")
     val skills: List<String>?,
     @SerializedName("address")
-    val address: String?,
+    val address: String?
 )
 
 fun UserResponse.toDomain() = User(
@@ -27,5 +27,5 @@ fun UserResponse.toDomain() = User(
     gender = gender,
     company = company,
     skills = skills,
-    address = address,
+    address = address
 )

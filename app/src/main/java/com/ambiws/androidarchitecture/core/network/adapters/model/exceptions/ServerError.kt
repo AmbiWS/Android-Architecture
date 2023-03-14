@@ -5,5 +5,5 @@ open class ServerError(
     val code: Int,
     cause: Throwable? = null,
     val errorsList: List<String>? = null,
-    val headers: Map<String, String>? = null,
+    val headers: Map<String, String>? = null
 ) : Exception(message, cause)

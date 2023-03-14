@@ -30,7 +30,7 @@ abstract class BaseFragment<VM : BaseViewModel, VB : ViewBinding>(
     @Suppress("UNCHECKED_CAST")
     protected open val viewModel: VM by lazy {
         viewModelForClass(
-            clazz = ((javaClass.genericSuperclass as ParameterizedType).actualTypeArguments[0] as Class<VM>).kotlin,
+            clazz = ((javaClass.genericSuperclass as ParameterizedType).actualTypeArguments[0] as Class<VM>).kotlin
         ).value
     }
 

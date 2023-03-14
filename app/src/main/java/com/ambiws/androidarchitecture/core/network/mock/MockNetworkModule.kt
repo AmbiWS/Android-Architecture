@@ -1,7 +1,7 @@
 package com.ambiws.androidarchitecture.core.network.mock
 
-import com.ambiws.androidarchitecture.core.network.api.*
 import com.ambiws.androidarchitecture.core.network.adapters.model.StatusCode
+import com.ambiws.androidarchitecture.core.network.api.*
 import com.google.gson.Gson
 import org.koin.dsl.module
 
@@ -14,7 +14,7 @@ val mockNetworkModule = module {
                 path = API_USERS_LIST,
                 body = { Gson().toJson(MockData.users) },
                 status = StatusCode.SUCCESS.code,
-                delayInMs = 900L,
+                delayInMs = 900L
             )
             // Mock response for [http://localhost/usersList/{userId}]
             .mockUsersById(MockData.usersId.toMutableList())
@@ -30,7 +30,7 @@ private fun MockInterceptor.mockUsersById(values: MutableList<Long>): MockInterc
             path = API_USER_BY_ID.replacePath(PATH_USER_BY_ID, userId.toString()),
             body = { Gson().toJson(MockData.getUserById(userId)) },
             status = StatusCode.SUCCESS.code,
-            delayInMs = 500L,
+            delayInMs = 500L
         ).mockUsersById(values)
     }
 }

@@ -8,7 +8,7 @@ interface UserDataSource {
     suspend fun getUserById(id: Long): UserResponse
 }
 
-class UserDataSourceImpl(private val userApi: UserApi): UserDataSource {
+class UserDataSourceImpl(private val userApi: UserApi) : UserDataSource {
 
     override suspend fun getUsersList(): List<UserResponse> {
         return userApi.getUsers()

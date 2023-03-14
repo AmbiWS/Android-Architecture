@@ -13,6 +13,6 @@ object AppModules {
         mockNetworkModule,
         homeModule,
         userModule,
-        listModule,
+        listModule
     )
 }

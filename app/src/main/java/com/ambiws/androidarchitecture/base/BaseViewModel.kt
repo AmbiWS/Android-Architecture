@@ -9,7 +9,6 @@ import com.ambiws.androidarchitecture.base.navigation.ViewModelNavigation
 import com.ambiws.androidarchitecture.core.network.adapters.ExceptionParser
 import com.ambiws.androidarchitecture.core.network.adapters.model.NetworkErrorData
 import com.ambiws.androidarchitecture.core.network.adapters.model.exceptions.UnauthorizedServerError
-import com.ambiws.androidarchitecture.utils.SingleLiveEvent
 import com.ambiws.androidarchitecture.utils.loge
 import kotlinx.coroutines.*
 import org.koin.core.component.KoinComponent
@@ -40,13 +39,13 @@ abstract class BaseViewModel : ViewModel(), KoinComponent {
     protected val mainContext: CoroutineContext = Dispatchers.Main
     protected val ioContext: CoroutineContext = Dispatchers.IO
 
-    private val _stateLiveEvent: MutableLiveData<UiState> = SingleLiveEvent()
+    private val _stateLiveEvent: MutableLiveData<UiState> = MutableLiveData()
     val stateLiveEvent: LiveData<UiState> = _stateLiveEvent
 
     protected fun setError(throwable: Throwable) {
         when (throwable) {
             is UnauthorizedServerError -> {
-                // TODO implement logout
+                // TODO implement logout or authorizer interceptor
                 navigation.navigateBackToStart(hideKeyboard = true)
             }
             else -> {
