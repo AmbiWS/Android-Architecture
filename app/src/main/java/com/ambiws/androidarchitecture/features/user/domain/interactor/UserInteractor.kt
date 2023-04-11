@@ -5,14 +5,17 @@ import com.ambiws.androidarchitecture.features.user.data.response.toDomain
 import com.ambiws.androidarchitecture.features.user.domain.model.User
 
 interface UserInteractor {
-    suspend fun getUsersList(): List<User>
+    suspend fun getUsersList(offset: Int = 0, amount: Int? = null): List<User>
     suspend fun getUserById(id: Long): User
 }
 
 class UserInteractorImpl(private val userDataSource: UserDataSource) : UserInteractor {
 
-    override suspend fun getUsersList(): List<User> {
-        return userDataSource.getUsersList().map {
+    override suspend fun getUsersList(offset: Int, amount: Int?): List<User> {
+        return userDataSource.getUsersList(
+            offset,
+            amount,
+        ).map {
             it.toDomain()
         }
     }

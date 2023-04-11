@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_user_premium_gradient"
+    android:paddingBottom="8dp">
+
+    <TextView
+        android:id="@+id/tvNameAndAge"
+        style="@style/TextClassic14.OneLine"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:paddingEnd="16dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/tvGender"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlSymmetry"
+        tools:text="Niko Armanda, 41 Niko Armanda, 41 Niko Armanda, 41" />
+
+    <TextView
+        android:id="@+id/tvGender"
+        style="@style/TextSecondary14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/tvNameAndAge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvNameAndAge"
+        tools:text="Male" />
+
+    <TextView
+        android:id="@+id/tvBio"
+        style="@style/TextClassic14"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNameAndAge"
+        tools:text="Vestibulum ac mi odio. Curabitur tincidunt congue sapien non volutpat. Donec tortor ipsum, bibendum vel eros fringilla, mollis posuere quam. Vivamus volutpat vehicula faucibus. In a turpis vel nibh faucibus bibendum ut a orci. Vestibulum et arcu dui. Proin tincidunt enim imperdiet, finibus lectus sit amet, vulputate est. Ut in finibus nisi, in mattis ligula. Phasellus gravida eros nec nisi eleifend venenatis. In hac habitasse platea dictumst." />
+</androidx.constraintlayout.widget.ConstraintLayout>

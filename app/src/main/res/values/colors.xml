@@ -10,4 +10,6 @@
     <color name="lt_red">#FF6863</color>
 
     <color name="divider">#33000000</color>
+    <color name="text_secondary">#808080</color>
+    <color name="bg_default_user_item">#DBD7D2</color>
 </resources>

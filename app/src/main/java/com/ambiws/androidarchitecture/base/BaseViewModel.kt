@@ -60,11 +60,14 @@ abstract class BaseViewModel : ViewModel(), KoinComponent {
 
     protected fun launch(
         coroutineContext: CoroutineContext = mainContext,
+        showDefaultLoader: Boolean = false,
         block: suspend CoroutineScope.() -> Unit
     ): Job {
         // TODO check behaviour on collect (endless loading?)
         return viewModelScope.launch(context = coroutineContext + defaultExceptionHandler) {
-            _stateLiveEvent.value = UiState.Loading
+            if (showDefaultLoader) {
+                _stateLiveEvent.value = UiState.Loading
+            }
             this.block()
             _stateLiveEvent.value = UiState.Success
         }

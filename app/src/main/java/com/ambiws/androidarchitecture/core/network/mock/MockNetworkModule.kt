@@ -12,9 +12,10 @@ val mockNetworkModule = module {
             // Mock response for [http://localhost/usersList]
             .mock(
                 path = API_USERS_LIST,
-                body = { Gson().toJson(MockData.users) },
+                body = Gson().toJson(MockData.users),
                 status = StatusCode.SUCCESS.code,
-                delayInMs = 900L
+                delayInMs = 900L,
+                responseClass = MockNetworkResponseClass.USER,
             )
             // Mock response for [http://localhost/usersList/{userId}]
             .mockUsersById(MockData.usersId.toMutableList())
@@ -28,7 +29,7 @@ private fun MockInterceptor.mockUsersById(values: MutableList<Long>): MockInterc
         val userId = values.removeAt(0)
         this.mock(
             path = API_USER_BY_ID.replacePath(PATH_USER_BY_ID, userId.toString()),
-            body = { Gson().toJson(MockData.getUserById(userId)) },
+            body = Gson().toJson(MockData.users.firstOrNull { it.id == userId }),
             status = StatusCode.SUCCESS.code,
             delayInMs = 500L
         ).mockUsersById(values)

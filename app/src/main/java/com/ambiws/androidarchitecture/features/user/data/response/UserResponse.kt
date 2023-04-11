@@ -7,9 +7,9 @@ data class UserResponse(
     @SerializedName("id")
     val id: Long,
     @SerializedName("name")
-    val name: String,
+    val name: String?,
     @SerializedName("age")
-    val age: Short,
+    val age: Short?,
     @SerializedName("gender")
     val gender: String?,
     @SerializedName("company")
@@ -17,15 +17,21 @@ data class UserResponse(
     @SerializedName("skills")
     val skills: List<String>?,
     @SerializedName("address")
-    val address: String?
+    val address: String?,
+    @SerializedName("bio")
+    val bio: String?,
+    @SerializedName("isPremium")
+    val isPremium: Boolean?,
 )
 
 fun UserResponse.toDomain() = User(
     id = id,
-    name = name,
-    age = age,
+    name = name.orEmpty(),
+    age = age ?: 0,
     gender = gender,
     company = company,
     skills = skills,
-    address = address
+    address = address,
+    bio = bio,
+    isPremium = isPremium ?: false,
 )

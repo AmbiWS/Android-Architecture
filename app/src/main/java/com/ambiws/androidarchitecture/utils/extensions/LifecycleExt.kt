@@ -3,6 +3,7 @@ package com.ambiws.androidarchitecture.utils.extensions
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.Observer
 
 fun <T> AppCompatActivity.subscribe(liveData: (LiveData<T>)?, onNext: (t: T) -> Unit) {
     liveData?.observe(this) {
@@ -18,4 +19,9 @@ fun <T> Fragment.subscribe(liveData: (LiveData<T>)?, onNext: (t: T) -> Unit) {
             onNext(it)
         }
     }
+}
+
+fun <T> Fragment.subscribeNullable(liveData: LiveData<T>?, onNext: (t: T?) -> Unit) {
+    liveData ?: return
+    liveData.observe(viewLifecycleOwner, Observer { onNext(it) })
 }
