@@ -1,9 +1,9 @@
 package com.ambiws.androidarchitecture.core.network.mock
 
 import com.ambiws.androidarchitecture.core.network.adapters.model.StatusCode
-import com.ambiws.androidarchitecture.features.user.data.response.UserResponse
+import com.ambiws.androidarchitecture.features.lists.user.data.response.UserResponse
 
-object MockData {
+object  MockData {
     val errorBadRequest = MockErrorResponse(
         status = StatusCode.BAD_REQUEST.code,
         message = "Bad request",
@@ -23,6 +23,44 @@ object MockData {
     )
 
     val users = listOf(
+        /*
+            Assuming that 'premium' users sorted on backed and emits first for better UX
+            For opposite case we need to load whole list first, generate sublist of premium users,
+            And finally handle pagination loading, excluding premium users (after they completely loaded)
+         */
+        UserResponse(
+            id = 3002L,
+            name = "Rob Onion",
+            age = 32,
+            gender = "Male",
+            company = null,
+            skills = null,
+            address = null,
+            bio = "Quisque ornare maximus facilisis. Etiam purus turpis, sagittis id sapien ut, ornare mattis metus. Nunc quis ex orci. In hac habitasse platea dictumst. Vestibulum nibh velit, molestie facilisis suscipit id, aliquet ac dui. Nullam consequat lobortis quam. Aenean egestas tellus id tellus varius rhoncus.",
+            isPremium = true,
+        ),
+        UserResponse(
+            id = 3003L,
+            name = "Sarah Haki",
+            age = 24,
+            gender = "Female",
+            company = null,
+            skills = null,
+            address = null,
+            bio = "Pellentesque condimentum dolor eget congue mollis. Nunc vestibulum magna purus, a vehicula sem consequat ut. Donec nec libero vehicula, eleifend orci nec, pulvinar elit. Donec dignissim hendrerit ullamcorper. Donec sodales fermentum justo quis tincidunt. Aenean risus lorem, interdum eget mollis at, dignissim ut magna. Duis cursus libero ante, euismod rhoncus mauris molestie et. Sed ut risus vel nibh pretium dignissim eu at tellus.",
+            isPremium = true,
+        ),
+        UserResponse(
+            id = 4011L,
+            name = "Nata Rain",
+            age = 23,
+            gender = "Female",
+            company = null,
+            skills = null,
+            address = null,
+            bio = "Etiam purus turpis, sagittis id sapien ut, ornare mattis metus.",
+            isPremium = true,
+        ),
         UserResponse(
             id = 2089L,
             name = "Sarah Bright",
@@ -62,28 +100,6 @@ object MockData {
             address = null,
             bio = null,
             isPremium = false,
-        ),
-        UserResponse(
-            id = 3002L,
-            name = "Rob Onion",
-            age = 32,
-            gender = "Male",
-            company = null,
-            skills = null,
-            address = null,
-            bio = "Quisque ornare maximus facilisis. Etiam purus turpis, sagittis id sapien ut, ornare mattis metus. Nunc quis ex orci. In hac habitasse platea dictumst. Vestibulum nibh velit, molestie facilisis suscipit id, aliquet ac dui. Nullam consequat lobortis quam. Aenean egestas tellus id tellus varius rhoncus.",
-            isPremium = true,
-        ),
-        UserResponse(
-            id = 3003L,
-            name = "Sarah Haki",
-            age = 24,
-            gender = "Female",
-            company = null,
-            skills = null,
-            address = null,
-            bio = "Pellentesque condimentum dolor eget congue mollis. Nunc vestibulum magna purus, a vehicula sem consequat ut. Donec nec libero vehicula, eleifend orci nec, pulvinar elit. Donec dignissim hendrerit ullamcorper. Donec sodales fermentum justo quis tincidunt. Aenean risus lorem, interdum eget mollis at, dignissim ut magna. Duis cursus libero ante, euismod rhoncus mauris molestie et. Sed ut risus vel nibh pretium dignissim eu at tellus.",
-            isPremium = true,
         ),
         UserResponse(
             id = 4000L,

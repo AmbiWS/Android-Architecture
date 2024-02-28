@@ -1,4 +1,4 @@
-package com.ambiws.androidarchitecture.features.list.ui.list
+package com.ambiws.androidarchitecture.features.lists.list.ui.list
 
 import androidx.core.view.isVisible
 import com.ambiws.androidarchitecture.R
@@ -9,7 +9,9 @@ import com.hannesdorfmann.adapterdelegates4.dsl.adapterDelegateViewBinding
 
 object UserAdapterDelegate {
 
-    fun userDefaultAdapterDelegate() : AdapterDelegate<List<UserListItemModel>> {
+    fun userDefaultAdapterDelegate(
+        onFavoriteClick: (Long, Boolean) -> Unit,
+    ) : AdapterDelegate<List<UserListItemModel>> {
         return adapterDelegateViewBinding<UserDefaultItemModel, UserListItemModel, ItemUserCardBinding>(
             { layoutInflater, parent ->
                 ItemUserCardBinding.inflate(layoutInflater, parent, false)
@@ -34,6 +36,10 @@ object UserAdapterDelegate {
                         tvSkills.text = skills
                     } ?: run {
                         tvSkills.text = context.getString(R.string.no_skills_provided)
+                    }
+                    checkBoxFavorite.isChecked = item.isFavorite ?: false
+                    checkBoxFavorite.setOnClickListener {
+                        onFavoriteClick.invoke(item.id, checkBoxFavorite.isChecked)
                     }
                 }
             }

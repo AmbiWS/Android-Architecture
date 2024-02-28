@@ -1,4 +1,4 @@
-package com.ambiws.androidarchitecture.features.list.ui.list
+package com.ambiws.androidarchitecture.features.lists.list.ui.list
 
 import android.graphics.Rect
 import android.view.View
@@ -17,7 +17,7 @@ class UserListDecorator : RecyclerView.ItemDecoration() {
         val itemViewType = parent.getChildViewHolder(view).itemViewType
         // TODO increase view type filtering experience (remove enum if possible)
         if (itemViewType == UserViewType.PREMIUM_USER_TYPE.ordinal) {
-            outRect.top = 16.dp
+            outRect.top = 8.dp
             outRect.left = 4.dp
             outRect.right = 4.dp
         } else if (itemViewType == UserViewType.DEFAULT_USER_TYPE.ordinal) {

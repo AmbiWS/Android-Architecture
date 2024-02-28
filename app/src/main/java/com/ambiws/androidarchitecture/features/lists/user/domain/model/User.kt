@@ -1,7 +1,7 @@
-package com.ambiws.androidarchitecture.features.user.domain.model
+package com.ambiws.androidarchitecture.features.lists.user.domain.model
 
-import com.ambiws.androidarchitecture.features.list.ui.list.UserDefaultItemModel
-import com.ambiws.androidarchitecture.features.list.ui.list.UserPremiumItemModel
+import com.ambiws.androidarchitecture.features.lists.list.ui.list.UserDefaultItemModel
+import com.ambiws.androidarchitecture.features.lists.list.ui.list.UserPremiumItemModel
 
 data class User(
     val id: Long,

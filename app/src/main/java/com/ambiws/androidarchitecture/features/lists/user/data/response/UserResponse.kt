@@ -1,6 +1,6 @@
-package com.ambiws.androidarchitecture.features.user.data.response
+package com.ambiws.androidarchitecture.features.lists.user.data.response
 
-import com.ambiws.androidarchitecture.features.user.domain.model.User
+import com.ambiws.androidarchitecture.features.lists.user.domain.model.User
 import com.google.gson.annotations.SerializedName
 
 data class UserResponse(

@@ -1,7 +1,7 @@
-package com.ambiws.androidarchitecture.features.user.data.dataSource
+package com.ambiws.androidarchitecture.features.lists.user.data.dataSource
 
 import com.ambiws.androidarchitecture.core.network.api.UserApi
-import com.ambiws.androidarchitecture.features.user.data.response.UserResponse
+import com.ambiws.androidarchitecture.features.lists.user.data.response.UserResponse
 
 interface UserDataSource {
     suspend fun getUsersList(offset: Int, amount: Int? = null): List<UserResponse>

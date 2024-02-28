@@ -1,4 +1,4 @@
-package com.ambiws.androidarchitecture.features.list.ui
+package com.ambiws.androidarchitecture.features.lists.list.ui
 
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -6,9 +6,9 @@ import com.ambiws.androidarchitecture.base.BaseFragment
 import com.ambiws.androidarchitecture.base.UiState
 import com.ambiws.androidarchitecture.base.list.DefaultListDiffer
 import com.ambiws.androidarchitecture.databinding.FragmentListBinding
-import com.ambiws.androidarchitecture.features.list.ui.list.UserListDecorator
-import com.ambiws.androidarchitecture.features.list.ui.list.UserListItemModel
-import com.ambiws.androidarchitecture.features.list.ui.list.UserViewType
+import com.ambiws.androidarchitecture.features.lists.list.ui.list.UserAdapterDelegate
+import com.ambiws.androidarchitecture.features.lists.list.ui.list.UserListDecorator
+import com.ambiws.androidarchitecture.features.lists.list.ui.list.UserListItemModel
 import com.ambiws.androidarchitecture.utils.RecyclerViewOnBottomScrolledListener
 import com.ambiws.androidarchitecture.utils.extensions.subscribe
 import com.ambiws.androidarchitecture.utils.extensions.subscribeNullable
@@ -18,11 +18,16 @@ class ListFragment : BaseFragment<ListViewModel, FragmentListBinding>(
     FragmentListBinding::inflate
 ) {
 
+    // TODO fix item duplication on 'favorite' action
+    // TODO optimize network calls
+    // TODO implement storage feature for data as 'favorite'
     private val adapter by lazy {
         AsyncListDifferDelegationAdapter(
             DefaultListDiffer<UserListItemModel>(),
-            UserViewType.DEFAULT_USER_TYPE.adapterDelegate,
-            UserViewType.PREMIUM_USER_TYPE.adapterDelegate,
+            UserAdapterDelegate.userDefaultAdapterDelegate { userId, isFavorite ->
+                viewModel.setFavorite(userId, isFavorite)
+            },
+            UserAdapterDelegate.userPremiumAdapterDelegate(),
         )
     }
 

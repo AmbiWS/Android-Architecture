@@ -1,4 +1,4 @@
-package com.ambiws.androidarchitecture.features.list.ui.list
+package com.ambiws.androidarchitecture.features.lists.list.ui.list
 
 import com.ambiws.androidarchitecture.base.list.ItemModel
 

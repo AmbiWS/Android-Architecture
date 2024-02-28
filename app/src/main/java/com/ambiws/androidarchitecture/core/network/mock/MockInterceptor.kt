@@ -2,7 +2,7 @@ package com.ambiws.androidarchitecture.core.network.mock
 
 import com.ambiws.androidarchitecture.BuildConfig
 import com.ambiws.androidarchitecture.core.network.adapters.model.StatusCode
-import com.ambiws.androidarchitecture.features.user.data.response.UserResponse
+import com.ambiws.androidarchitecture.features.lists.user.data.response.UserResponse
 import com.ambiws.androidarchitecture.utils.logd
 import com.ambiws.androidarchitecture.utils.loge
 import com.google.gson.Gson

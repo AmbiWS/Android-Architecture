@@ -15,6 +15,6 @@
 
     <fragment
         android:id="@+id/listFragment"
-        android:name="com.ambiws.androidarchitecture.features.list.ui.ListFragment"
+        android:name="com.ambiws.androidarchitecture.features.lists.list.ui.ListFragment"
         android:label="ListFragment" />
 </navigation>

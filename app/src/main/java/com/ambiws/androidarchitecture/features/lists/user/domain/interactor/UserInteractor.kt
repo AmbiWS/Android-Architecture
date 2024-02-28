@@ -1,8 +1,8 @@
-package com.ambiws.androidarchitecture.features.user.domain.interactor
+package com.ambiws.androidarchitecture.features.lists.user.domain.interactor
 
-import com.ambiws.androidarchitecture.features.user.data.dataSource.UserDataSource
-import com.ambiws.androidarchitecture.features.user.data.response.toDomain
-import com.ambiws.androidarchitecture.features.user.domain.model.User
+import com.ambiws.androidarchitecture.features.lists.user.data.dataSource.UserDataSource
+import com.ambiws.androidarchitecture.features.lists.user.data.response.toDomain
+import com.ambiws.androidarchitecture.features.lists.user.domain.model.User
 
 interface UserInteractor {
     suspend fun getUsersList(offset: Int = 0, amount: Int? = null): List<User>

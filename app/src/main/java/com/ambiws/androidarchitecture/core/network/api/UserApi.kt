@@ -1,6 +1,6 @@
 package com.ambiws.androidarchitecture.core.network.api
 
-import com.ambiws.androidarchitecture.features.user.data.response.UserResponse
+import com.ambiws.androidarchitecture.features.lists.user.data.response.UserResponse
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
