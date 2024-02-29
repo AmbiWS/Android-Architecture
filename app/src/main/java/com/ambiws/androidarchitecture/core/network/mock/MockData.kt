@@ -3,7 +3,7 @@ package com.ambiws.androidarchitecture.core.network.mock
 import com.ambiws.androidarchitecture.core.network.adapters.model.StatusCode
 import com.ambiws.androidarchitecture.features.lists.user.data.response.UserResponse
 
-object  MockData {
+object MockData {
     val errorBadRequest = MockErrorResponse(
         status = StatusCode.BAD_REQUEST.code,
         message = "Bad request",
@@ -30,7 +30,7 @@ object  MockData {
          */
         UserResponse(
             id = 3002L,
-            name = "Rob Onion",
+            name = "Rob Smith",
             age = 32,
             gender = "Male",
             company = null,
@@ -41,7 +41,7 @@ object  MockData {
         ),
         UserResponse(
             id = 3003L,
-            name = "Sarah Haki",
+            name = "Sarah Evans",
             age = 24,
             gender = "Female",
             company = null,
@@ -52,7 +52,7 @@ object  MockData {
         ),
         UserResponse(
             id = 4011L,
-            name = "Nata Rain",
+            name = "Nata Jones",
             age = 23,
             gender = "Female",
             company = null,
@@ -103,7 +103,7 @@ object  MockData {
         ),
         UserResponse(
             id = 4000L,
-            name = "DevUser 1",
+            name = "DevUser A",
             age = 1,
             gender = null,
             company = null,
@@ -114,7 +114,7 @@ object  MockData {
         ),
         UserResponse(
             id = 4001L,
-            name = "DevUser 2",
+            name = "DevUser B",
             age = 1,
             gender = null,
             company = null,
@@ -125,7 +125,7 @@ object  MockData {
         ),
         UserResponse(
             id = 4002L,
-            name = "DevUser 3",
+            name = "DevUser C",
             age = 1,
             gender = null,
             company = null,
@@ -136,7 +136,7 @@ object  MockData {
         ),
         UserResponse(
             id = 4003L,
-            name = "DevUser 4",
+            name = "DevUser D",
             age = 1,
             gender = null,
             company = null,
@@ -147,7 +147,7 @@ object  MockData {
         ),
         UserResponse(
             id = 4004L,
-            name = "DevUser 5",
+            name = "DevUser E",
             age = 1,
             gender = null,
             company = null,
@@ -158,7 +158,7 @@ object  MockData {
         ),
         UserResponse(
             id = 4005L,
-            name = "DevUser 6",
+            name = "DevUser F",
             age = 1,
             gender = null,
             company = null,
@@ -169,7 +169,7 @@ object  MockData {
         ),
         UserResponse(
             id = 4006L,
-            name = "DevUser 7",
+            name = "DevUser G",
             age = 1,
             gender = null,
             company = null,
@@ -180,7 +180,7 @@ object  MockData {
         ),
         UserResponse(
             id = 4007L,
-            name = "DevUser 8",
+            name = "DevUser H",
             age = 1,
             gender = null,
             company = null,
@@ -191,7 +191,7 @@ object  MockData {
         ),
         UserResponse(
             id = 4008L,
-            name = "DevUser 9",
+            name = "DevUser I",
             age = 1,
             gender = null,
             company = null,
@@ -202,7 +202,7 @@ object  MockData {
         ),
         UserResponse(
             id = 4009L,
-            name = "DevUser 10",
+            name = "DevUser J",
             age = 1,
             gender = null,
             company = null,
@@ -213,7 +213,7 @@ object  MockData {
         ),
         UserResponse(
             id = 4010L,
-            name = "DevUser 11",
+            name = "DevUser K",
             age = 1,
             gender = null,
             company = null,

@@ -42,7 +42,6 @@ class ListViewModel(
         usersLiveData.value = emptyList()
     }
 
-    // TODO implement favorite users feature (room or alt)
     fun initUsersList(applyLoader: Boolean = false) {
         launch(showDefaultLoader = applyLoader) {
             val usersList = userInteractor.getUsersList()
