@@ -6,7 +6,8 @@ class HomeViewModel : BaseViewModel() {
 
     fun navigateToListFragment() {
         navigation.navigate(
-            HomeFragmentDirections.actionHomeFragmentToListFragment()
+            //HomeFragmentDirections.actionHomeFragmentToListFragment()
+            HomeFragmentDirections.actionHomeFragmentToMockGoogleMapsFragment()
         )
     }
 }

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/ivHome"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginVertical="12dp"
+        android:layout_marginEnd="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.497"
+        app:srcCompat="@drawable/home_picture" />
+
+    <TextView
+        android:id="@+id/tvPrice"
+        style="@style/TextClassic14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="$500,000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvStreet"
+        style="@style/TextSecondary14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:text="115 Lake Rd Streed, OK 56720"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/ivHome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPrice" />
+
+    <ImageView
+        android:id="@+id/ivBedrooms"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="22dp"
+        app:layout_constraintStart_toStartOf="@+id/tvStreet"
+        app:layout_constraintTop_toBottomOf="@+id/tvStreet"
+        app:srcCompat="@drawable/bed" />
+
+    <TextView
+        android:id="@+id/tvBedrooms"
+        style="@style/TextClassic14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="4"
+        app:layout_constraintBottom_toBottomOf="@+id/ivBedrooms"
+        app:layout_constraintStart_toEndOf="@+id/ivBedrooms"
+        app:layout_constraintTop_toTopOf="@+id/ivBedrooms" />
+
+    <ImageView
+        android:id="@+id/ivBathrooms"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="22dp"
+        app:layout_constraintStart_toEndOf="@+id/tvBedrooms"
+        app:layout_constraintTop_toBottomOf="@+id/tvStreet"
+        app:srcCompat="@drawable/bath" />
+
+    <TextView
+        android:id="@+id/tvBathrooms"
+        style="@style/TextClassic14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="2"
+        app:layout_constraintBottom_toBottomOf="@+id/ivBathrooms"
+        app:layout_constraintStart_toEndOf="@+id/ivBathrooms"
+        app:layout_constraintTop_toTopOf="@+id/ivBathrooms" />
+
+    <ImageView
+        android:id="@+id/ivSquare"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/tvSquare"
+        app:layout_constraintTop_toBottomOf="@+id/tvStreet"
+        app:srcCompat="@drawable/square" />
+
+    <TextView
+        android:id="@+id/tvSquare"
+        style="@style/TextClassic14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="95m²"
+        app:layout_constraintBottom_toBottomOf="@+id/ivSquare"
+        app:layout_constraintEnd_toEndOf="@+id/tvStreet"
+        app:layout_constraintTop_toTopOf="@+id/ivSquare" />
+</androidx.constraintlayout.widget.ConstraintLayout>
