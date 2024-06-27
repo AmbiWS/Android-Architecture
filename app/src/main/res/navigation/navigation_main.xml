@@ -7,13 +7,16 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.ambiws.androidarchitecture.features.home.ui.HomeFragment"
-        android:label="HomeFragment" >
+        android:label="HomeFragment">
         <action
             android:id="@+id/action_homeFragment_to_listFragment"
             app:destination="@id/listFragment" />
         <action
             android:id="@+id/action_homeFragment_to_mockGoogleMapsFragment"
             app:destination="@id/mockGoogleMapsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_mockHomeDetailsFragment"
+            app:destination="@id/mockHomeDetailsFragment" />
     </fragment>
 
     <fragment
@@ -25,4 +28,9 @@
         android:id="@+id/mockGoogleMapsFragment"
         android:name="com.ambiws.androidarchitecture.features.design.ui.MockGoogleMapsFragment"
         android:label="MockGoogleMapsFragment" />
+
+    <fragment
+        android:id="@+id/mockHomeDetailsFragment"
+        android:name="com.ambiws.androidarchitecture.features.design.ui.MockHomeDetailsFragment"
+        android:label="MockHomeDetailsFragment" />
 </navigation>

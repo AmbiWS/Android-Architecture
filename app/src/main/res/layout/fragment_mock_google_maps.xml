@@ -80,6 +80,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/home_selected" />
 
+    <ImageView
+        android:id="@+id/ivHome4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="560dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/home" />
+
     <TextView
         android:id="@+id/tvHome1"
         style="@style/TextClassic14"
@@ -106,7 +116,6 @@
         android:fontFamily="@font/poppins_medium"
         android:paddingHorizontal="8dp"
         android:paddingVertical="1dp"
-
         android:text="$350,000"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="@+id/ivHome2"
@@ -129,8 +138,24 @@
         app:layout_constraintStart_toStartOf="@+id/ivHome3"
         app:layout_constraintTop_toBottomOf="@+id/ivHome3" />
 
+    <TextView
+        android:id="@+id/tvHome4"
+        style="@style/TextClassic14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/bg_white_round"
+        android:fontFamily="@font/poppins_medium"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="1dp"
+        android:text="$610,000"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/ivHome4"
+        app:layout_constraintStart_toStartOf="@+id/ivHome4"
+        app:layout_constraintTop_toBottomOf="@+id/ivHome4" />
+
     <include
-        layout="@layout/item_home"
+        layout="@layout/item_mock_home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"

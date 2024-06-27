@@ -52,7 +52,7 @@
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="@+id/tvStreet"
         app:layout_constraintTop_toBottomOf="@+id/tvStreet"
-        app:srcCompat="@drawable/bed" />
+        app:srcCompat="@drawable/ic_bed" />
 
     <TextView
         android:id="@+id/tvBedrooms"
@@ -74,7 +74,7 @@
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toEndOf="@+id/tvBedrooms"
         app:layout_constraintTop_toBottomOf="@+id/tvStreet"
-        app:srcCompat="@drawable/bath" />
+        app:srcCompat="@drawable/ic_bath" />
 
     <TextView
         android:id="@+id/tvBathrooms"
@@ -110,7 +110,7 @@
         app:layout_constraintTop_toTopOf="@+id/ivSquare" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvView"
         style="@style/TextClassic14"
         android:layout_width="0dp"
         android:layout_height="40dp"
