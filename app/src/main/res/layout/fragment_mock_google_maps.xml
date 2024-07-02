@@ -8,7 +8,7 @@
     <ImageView
         android:id="@+id/ivGoogleMaps"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,7 +48,7 @@
         android:layout_marginTop="240dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/home" />
+        app:srcCompat="@drawable/ic_home" />
 
     <ImageView
         android:id="@+id/ivHome2"
@@ -58,7 +58,7 @@
         android:layout_marginTop="282dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/home" />
+        app:srcCompat="@drawable/ic_home" />
 
     <ImageView
         android:id="@+id/ivHomeSelectedBg"
@@ -88,7 +88,7 @@
         android:layout_marginTop="560dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/home" />
+        app:srcCompat="@drawable/ic_home" />
 
     <TextView
         android:id="@+id/tvHome1"

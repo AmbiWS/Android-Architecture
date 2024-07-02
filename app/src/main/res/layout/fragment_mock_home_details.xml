@@ -134,7 +134,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/ivBedrooms"
         app:layout_constraintEnd_toStartOf="@+id/tvSquare"
         app:layout_constraintTop_toTopOf="@+id/ivBedrooms"
-        app:srcCompat="@drawable/square" />
+        app:srcCompat="@drawable/ic_square" />
 
     <TextView
         android:id="@+id/tvSquare"
