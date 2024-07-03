@@ -1,6 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/snow_white">
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_arrow_left_center_black" />
+
+    <ImageView
+        android:id="@+id/ivPhone"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginEnd="24dp"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivBack"
+        app:srcCompat="@drawable/ic_phone" />
+
+    <TextView
+        android:id="@+id/tvName"
+        style="@style/TextClassic14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Katri Leudbald"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@+id/ivPhone"
+        app:layout_constraintStart_toEndOf="@+id/ivBack"
+        app:layout_constraintTop_toTopOf="@+id/ivPhone" />
+
+    <TextView
+        android:id="@+id/tvPhone"
+        style="@style/TextSecondary14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="+46 (130) 5050 30"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivPhone"
+        app:layout_constraintEnd_toStartOf="@+id/ivPhone"
+        app:layout_constraintStart_toEndOf="@+id/ivBack" />
+
+    <include
+        layout="@layout/view_mock_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

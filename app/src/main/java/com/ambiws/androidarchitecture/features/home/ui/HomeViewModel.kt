@@ -8,7 +8,8 @@ class HomeViewModel : BaseViewModel() {
         navigation.navigate(
             //HomeFragmentDirections.actionHomeFragmentToListFragment()
             //HomeFragmentDirections.actionHomeFragmentToMockGoogleMapsFragment()
-            HomeFragmentDirections.actionHomeFragmentToMockHomeDetailsFragment()
+            //HomeFragmentDirections.actionHomeFragmentToMockHomeDetailsFragment()
+            HomeFragmentDirections.actionHomeFragmentToMockChatFragment()
         )
     }
 }

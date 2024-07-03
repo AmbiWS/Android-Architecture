@@ -17,6 +17,9 @@
         <action
             android:id="@+id/action_homeFragment_to_mockHomeDetailsFragment"
             app:destination="@id/mockHomeDetailsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_mockChatFragment"
+            app:destination="@id/mockChatFragment" />
     </fragment>
 
     <fragment
@@ -33,4 +36,9 @@
         android:id="@+id/mockHomeDetailsFragment"
         android:name="com.ambiws.androidarchitecture.features.design.ui.MockHomeDetailsFragment"
         android:label="MockHomeDetailsFragment" />
+
+    <fragment
+        android:id="@+id/mockChatFragment"
+        android:name="com.ambiws.androidarchitecture.features.design.ui.MockChatFragment"
+        android:label="MockChatFragment" />
 </navigation>
