@@ -9,7 +9,8 @@ class HomeViewModel : BaseViewModel() {
             //HomeFragmentDirections.actionHomeFragmentToListFragment()
             //HomeFragmentDirections.actionHomeFragmentToMockGoogleMapsFragment()
             //HomeFragmentDirections.actionHomeFragmentToMockHomeDetailsFragment()
-            HomeFragmentDirections.actionHomeFragmentToMockChatFragment()
+            //HomeFragmentDirections.actionHomeFragmentToMockChatFragment()
+            HomeFragmentDirections.actionHomeFragmentToMockMusicCatalogFragment()
         )
     }
 }

@@ -14,7 +14,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/mock_google_map" />
+        app:srcCompat="@drawable/img_mock_google_map" />
 
     <ImageView
         android:id="@+id/ivBack"
@@ -78,7 +78,7 @@
         android:layout_marginTop="420dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/home_selected" />
+        app:srcCompat="@drawable/img_home_selected" />
 
     <ImageView
         android:id="@+id/ivHome4"

@@ -84,8 +84,8 @@
         android:layout_marginBottom="48dp"
         app:layout_constraintBottom_toTopOf="@+id/tvReply1"
         app:layout_constraintStart_toStartOf="parent"
-        app:shapeAppearanceOverlay="@style/Circular"
-        app:srcCompat="@drawable/mock_profile_picture" />
+        app:shapeAppearanceOverlay="@style/Circular50"
+        app:srcCompat="@drawable/img_mock_profile_picture" />
 
     <TextView
         android:id="@+id/tvReply2"

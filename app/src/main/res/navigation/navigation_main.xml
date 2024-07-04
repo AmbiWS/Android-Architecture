@@ -20,6 +20,9 @@
         <action
             android:id="@+id/action_homeFragment_to_mockChatFragment"
             app:destination="@id/mockChatFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_mockMusicCatalogFragment"
+            app:destination="@id/mockMusicCatalogFragment" />
     </fragment>
 
     <fragment
@@ -41,4 +44,9 @@
         android:id="@+id/mockChatFragment"
         android:name="com.ambiws.androidarchitecture.features.design.ui.MockChatFragment"
         android:label="MockChatFragment" />
+
+    <fragment
+        android:id="@+id/mockMusicCatalogFragment"
+        android:name="com.ambiws.androidarchitecture.features.design.ui.MockMusicCatalogFragment"
+        android:label="MockMusicCatalogFragment" />
 </navigation>
