@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient_blue_to_black">
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/bg_gray_round128"
+        android:padding="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_arrow_left_center" />
+
+    <ImageView
+        android:id="@+id/ivMenu"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/bg_gray_round128"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_menu" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_music"
+        android:drawablePadding="4dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="Ambi Music App"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivBack"
+        app:layout_constraintEnd_toStartOf="@+id/ivMenu"
+        app:layout_constraintStart_toEndOf="@+id/ivBack"
+        app:layout_constraintTop_toTopOf="@+id/ivBack" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivCover1"
+        android:layout_width="0dp"
+        android:layout_height="380dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="32dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivBack"
+        app:shapeAppearanceOverlay="@style/Circular10"
+        app:srcCompat="@drawable/img_album_cover5" />
+
+    <TextView
+        android:id="@+id/tvSong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="Stairway to Heaven"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/ivCover1"
+        app:layout_constraintTop_toBottomOf="@+id/ivCover1" />
+
+    <TextView
+        android:id="@+id/tvArtist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/poppins_regular"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="Led Zeppelin"
+        android:textColor="@color/snow_white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/ivCover1"
+        app:layout_constraintTop_toBottomOf="@+id/tvSong" />
+
+    <View
+        android:id="@+id/bgSearch"
+        android:layout_width="94dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_gray_round128"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvArtist" />
+
+    <ImageView
+        android:id="@+id/ivLike"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bgSearch"
+        app:layout_constraintStart_toStartOf="@+id/bgSearch"
+        app:layout_constraintTop_toTopOf="@+id/bgSearch"
+        app:srcCompat="@drawable/ic_like" />
+
+    <TextView
+        android:id="@+id/tvLikes"
+        style="@style/TextClassic14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="1.3 B"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivLike"
+        app:layout_constraintStart_toEndOf="@+id/ivLike"
+        app:layout_constraintTop_toTopOf="@+id/ivLike" />
+
+    <View
+        android:id="@+id/bgDownload"
+        android:layout_width="104dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_gray_round128"
+        app:layout_constraintStart_toEndOf="@+id/bgSearch"
+        app:layout_constraintTop_toBottomOf="@+id/tvArtist" />
+
+    <TextView
+        android:id="@+id/tvDownload"
+        style="@style/TextClassic14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Download"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivLike"
+        app:layout_constraintStart_toStartOf="@+id/bgDownload"
+        app:layout_constraintTop_toTopOf="@+id/ivLike" />
+
+    <View
+        android:id="@+id/bgLyrics"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_gray_round128"
+        app:layout_constraintStart_toEndOf="@+id/bgDownload"
+        app:layout_constraintTop_toBottomOf="@+id/tvArtist" />
+
+    <TextView
+        android:id="@+id/tvLyrics"
+        style="@style/TextClassic14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Lyrics"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivLike"
+        app:layout_constraintStart_toStartOf="@+id/bgLyrics"
+        app:layout_constraintTop_toTopOf="@+id/ivLike" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/slider"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:value="0.3"
+        app:layout_constraintEnd_toEndOf="@+id/ivCover1"
+        app:layout_constraintStart_toStartOf="@+id/ivCover1"
+        app:layout_constraintTop_toBottomOf="@+id/bgSearch"
+        app:thumbColor="@color/lt_red"
+        app:trackColorActive="@color/lt_red" />
+
+    <TextView
+        android:id="@+id/tvCurrentTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="1:41"
+        android:textColor="@color/snow_white"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/slider"
+        app:layout_constraintTop_toTopOf="@+id/slider" />
+
+    <TextView
+        android:id="@+id/tvSongTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="8:03"
+        android:textColor="@color/snow_white"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/slider"
+        app:layout_constraintTop_toTopOf="@+id/slider" />
+
+    <ImageView
+        android:id="@+id/ivLoop"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="@+id/tvCurrentTime"
+        app:layout_constraintTop_toBottomOf="@+id/tvCurrentTime"
+        app:srcCompat="@drawable/ic_loop" />
+
+    <ImageView
+        android:id="@+id/ivShuffle"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="@+id/tvSongTime"
+        app:layout_constraintTop_toBottomOf="@+id/tvCurrentTime"
+        app:srcCompat="@drawable/ic_shuffle" />
+
+    <ImageView
+        android:id="@+id/ivPlay"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="@drawable/bg_lt_red_round128"
+        android:paddingStart="10dp"
+        android:paddingEnd="6dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivLoop"
+        app:layout_constraintEnd_toStartOf="@+id/ivShuffle"
+        app:layout_constraintStart_toEndOf="@+id/ivLoop"
+        app:layout_constraintTop_toTopOf="@+id/ivLoop"
+        app:srcCompat="@android:drawable/ic_media_play" />
+
+    <ImageView
+        android:id="@+id/ivNext"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivPlay"
+        app:layout_constraintEnd_toStartOf="@+id/ivShuffle"
+        app:layout_constraintStart_toEndOf="@+id/ivPlay"
+        app:layout_constraintTop_toTopOf="@+id/ivPlay"
+        app:srcCompat="@drawable/ic_next" />
+
+    <ImageView
+        android:id="@+id/ivPrev"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivPlay"
+        app:layout_constraintEnd_toStartOf="@+id/ivPlay"
+        app:layout_constraintStart_toEndOf="@+id/ivLoop"
+        app:layout_constraintTop_toTopOf="@+id/ivPlay"
+        app:srcCompat="@drawable/ic_prev" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

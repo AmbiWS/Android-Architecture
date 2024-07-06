@@ -31,6 +31,7 @@
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
         android:drawableStart="@drawable/ic_music"
         android:drawablePadding="4dp"
         android:fontFamily="@font/poppins_semibold"
@@ -165,8 +166,8 @@
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/ivCover2"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_marginTop="32dp"
         android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="@+id/ivCover1"
@@ -180,7 +181,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="4dp"
         android:fontFamily="@font/poppins_semibold"
         android:text="Nulla congue"
         android:textColor="@color/white"
@@ -194,7 +195,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginBottom="14dp"
+        android:layout_marginBottom="4dp"
         android:fontFamily="@font/poppins_regular"
         android:text="Condimentum"
         android:textColor="@color/snow_white"
@@ -204,9 +205,9 @@
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/ivCover3"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
         android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="@+id/ivCover1"
         app:layout_constraintTop_toBottomOf="@+id/ivCover2"
@@ -219,7 +220,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="4dp"
         android:fontFamily="@font/poppins_semibold"
         android:text="Nullam sem erat"
         android:textColor="@color/white"
@@ -233,7 +234,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginBottom="14dp"
+        android:layout_marginBottom="4dp"
         android:fontFamily="@font/poppins_regular"
         android:text="Duis vitae"
         android:textColor="@color/snow_white"
@@ -243,9 +244,9 @@
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/ivCover4"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
         android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="@+id/ivCover1"
         app:layout_constraintTop_toBottomOf="@+id/ivCover3"
@@ -258,7 +259,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="4dp"
         android:fontFamily="@font/poppins_semibold"
         android:text="Vivamus pharetra"
         android:textColor="@color/white"
@@ -272,7 +273,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginBottom="14dp"
+        android:layout_marginBottom="4dp"
         android:fontFamily="@font/poppins_regular"
         android:text="Proin condimentum rutrum"
         android:textColor="@color/snow_white"
@@ -306,5 +307,53 @@
         app:layout_constraintEnd_toEndOf="@+id/tvPlayAll"
         app:layout_constraintTop_toTopOf="@+id/tvSong3"
         app:srcCompat="@android:drawable/ic_media_play" />
+
+    <ImageView
+        android:id="@+id/ivPlay5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/ivCover5"
+        app:layout_constraintEnd_toEndOf="@+id/tvPlayAll"
+        app:layout_constraintTop_toTopOf="@+id/ivCover5"
+        app:srcCompat="@android:drawable/ic_media_play" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivCover5"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="@+id/ivCover1"
+        app:layout_constraintTop_toBottomOf="@+id/ivCover4"
+        app:shapeAppearanceOverlay="@style/Circular10"
+        app:srcCompat="@drawable/img_album_cover5" />
+
+    <TextView
+        android:id="@+id/tvSong4"
+        style="@style/TextClassic14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Praesent tellus"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/ivCover5"
+        app:layout_constraintTop_toTopOf="@+id/ivCover5" />
+
+    <TextView
+        android:id="@+id/tvArtist4"
+        style="@style/TextClassic14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Lacinia at cursus"
+        android:textColor="@color/snow_white"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivCover5"
+        app:layout_constraintStart_toEndOf="@+id/ivCover5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
