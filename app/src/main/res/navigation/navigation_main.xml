@@ -11,50 +11,10 @@
         <action
             android:id="@+id/action_homeFragment_to_listFragment"
             app:destination="@id/listFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_mockGoogleMapsFragment"
-            app:destination="@id/mockGoogleMapsFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_mockHomeDetailsFragment"
-            app:destination="@id/mockHomeDetailsFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_mockChatFragment"
-            app:destination="@id/mockChatFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_mockMusicCatalogFragment"
-            app:destination="@id/mockMusicCatalogFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_mockMusicDetailsFragment"
-            app:destination="@id/mockMusicDetailsFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/listFragment"
         android:name="com.ambiws.androidarchitecture.features.lists.list.ui.ListFragment"
         android:label="ListFragment" />
-
-    <fragment
-        android:id="@+id/mockGoogleMapsFragment"
-        android:name="com.ambiws.androidarchitecture.features.design.ui.MockGoogleMapsFragment"
-        android:label="MockGoogleMapsFragment" />
-
-    <fragment
-        android:id="@+id/mockHomeDetailsFragment"
-        android:name="com.ambiws.androidarchitecture.features.design.ui.MockHomeDetailsFragment"
-        android:label="MockHomeDetailsFragment" />
-
-    <fragment
-        android:id="@+id/mockChatFragment"
-        android:name="com.ambiws.androidarchitecture.features.design.ui.MockChatFragment"
-        android:label="MockChatFragment" />
-
-    <fragment
-        android:id="@+id/mockMusicCatalogFragment"
-        android:name="com.ambiws.androidarchitecture.features.design.ui.MockMusicCatalogFragment"
-        android:label="MockMusicCatalogFragment" />
-
-    <fragment
-        android:id="@+id/mockMusicDetailsFragment"
-        android:name="com.ambiws.androidarchitecture.features.design.ui.MockMusicDetailsFragment"
-        android:label="MockMusicDetailsFragment" />
 </navigation>
